@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estud-IA - Plan Listo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Personalización de colores en Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+            },
+            secondary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            accent: {
+              500: '#ec4899',
+              600: '#db2777',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-primary-200 to-secondary-300 flex flex-col p-6">
+
+    <!-- Header -->
+    <header class="w-full max-w-5xl flex justify-between items-center mb-10 mx-auto">
+      <h1 class="text-xl font-bold text-primary-900">Plan de estudio</h1>
+    </header>
+
+    <!-- Contenedor principal que crece -->
+    <div class="flex-grow flex flex-col items-center justify-center">
+      <main class="bg-white shadow-lg rounded-3xl p-8 max-w-5xl w-full flex flex-col items-center">
+
+        <!-- Título principal -->
+        <h2 class="text-3xl font-extrabold text-primary-800 mb-8 text-center">¡Tu plan de estudios está listo! 🎉</h2>
+        
+        <!-- Contenedor de respuestas -->
+        <div class="bg-primary-50 p-6 rounded-xl shadow-sm w-full mb-6 border border-primary-100">
+          <h3 class="text-xl font-bold text-primary-700 mb-4">Tus respuestas:</h3>
+          <ul id="user-answers" class="space-y-2 text-primary-900">
+           <li><strong>Nivel:</strong> Principiante</li>
+<!--       <li><strong>Tema:</strong> Programación Python</li>
+            <li><strong>Duración:</strong> 8 semanas</li>-->
+          </ul>
+        </div>
+        
+        <!-- Contenedor del plan IA -->
+        <div class="bg-primary-50 p-6 rounded-xl shadow-sm w-full mb-8 border border-primary-100">
+          <h3 class="text-xl font-bold text-primary-700 mb-4">Plan recomendado:</h3>
+          <div id="ia-plan" class="space-y-3 text-primary-900">
+            <p class="font-medium">📅 Semana 1: Introducción a Python (sintaxis básica, variables, operadores)</p>
+            <p class="font-medium">📅 Semana 2: Estructuras de datos (listas, diccionarios, tuplas)</p>
+          </div>
+        </div>
+
+        <!-- Botón fuera del cuadro -->
+        <button class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-xl transition-all text-lg font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-1">
+          Descargar PDF
+        </button>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-primary-700 text-sm text-center flex justify-center items-center gap-2 mt-10">
+      <span>El programó un policia pixelado</span>
+      <img src="poli.jpg" alt="policia" class="w-10 h-10 rounded-full"/>
+    </footer>
+
+</body>
+</html>

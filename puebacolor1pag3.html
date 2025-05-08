@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>Estud-IA - Plan Listo</title> 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- configuracion de colores -->
+    
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366F1',   // Índigo
+            neutral: '#4B5563',    // Gris
+            accent: '#06B6D4'     // Cian
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-primary/10 to-accent/10 flex flex-col p-6">
+    
+    <!-- Encabezado -->
+    <header class="w-full max-w-5xl flex justify-between items-center mb-10 mx-auto">
+      <h1 class="text-xl font-bold text-neutral-800">Plan de estudio</h1>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="flex-grow flex flex-col items-center justify-center">
+      <main class="bg-white shadow-lg rounded-3xl p-8 max-w-5xl w-full">
+        <!-- Título principal -->
+        <h2 class="text-3xl font-extrabold text-primary mb-6 text-center">¡Tu plan de estudios está listo! 🎉</h2>
+        
+        <!-- Contenedor de resultados -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Respuestas usuario -->
+          <div class="bg-neutral-50 p-6 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-neutral-800 mb-4">Tus respuestas:</h3>
+            <ul id="user-answers" class="space-y-2 text-neutral-600">
+              <li><strong>Nivel:</strong> Principiante</li>
+            </ul>
+          </div>
+          
+          <!-- Plan de la IA -->
+          <div class="bg-neutral-50 p-6 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-neutral-800 mb-4">Plan recomendado:</h3>
+            <div id="ia-plan" class="space-y-2 text-neutral-600">
+              <p>1. Semana 1: Introducción a Python</p>
+              <p>2. Semana 2: Estructuras de datos</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de acción -->
+        <div class="flex justify-center mt-8">
+          <button class="bg-accent text-white px-8 py-4 rounded-xl hover:bg-accent/90 transition-all duration-300 text-lg font-semibold shadow-md hover:shadow-lg">
+            Descargar PDF
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-neutral-600 text-sm text-center flex justify-center items-center gap-2 mt-10">
+      <span>El programó un policía pixelado</span>
+      <img src="poli.jpg" alt="policia" class="w-10 h-10"/>
+    </footer>
+</body>
+</html>

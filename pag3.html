@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estud-IA - Plan Listo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E5E7EB',      
+            secondary: '#7C3AED',    
+            background: '#0D0A1F',   
+            surface: '#111827',      
+            accent: '#A78BFA',       
+            border: '#6D28D9',       
+            white: '#FFFFFF',
+            black: '#000000',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-black to-background text-white overflow-x-hidden">
+
+  <!-- Barra superior -->
+  <header class="bg-black text-white p-4 fixed top-0 left-0 w-full z-10 shadow-lg">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto">
+      <span class="text-xl font-bold">Estud-IA</span>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="flex-grow flex items-center justify-center pt-24">
+    <main class="relative max-w-7xl w-full px-6">
+      <!-- Título principal -->
+      <h2 class="text-5xl font-extrabold text-primary text-center mb-12">
+        ¡Tu plan de estudios está listo! <span class="text-secondary">🎉</span>
+      </h2>
+
+      <!-- Contenido en dos columnas -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Respuestas usuario -->
+        <div class="bg-surface border border-accent p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-secondary mb-6">Tus respuestas:</h3>
+          <ul id="user-answers" class="space-y-3 text-gray-300">
+            <li class="text-lg"><strong>Nivel:</strong> Principiante</li>
+          </ul>
+        </div>
+
+        <!-- Plan recomendado -->
+        <div class="bg-surface border border-accent p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-secondary mb-6">Plan recomendado:</h3>
+          <div id="ia-plan" class="space-y-3 text-gray-300">
+            <p class="text-lg">1. Semana 1: Introducción a Python</p>
+            <p class="text-lg">2. Semana 2: Estructuras de datos</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <div class="flex justify-center mt-12">
+        <button class="bg-secondary hover:bg-accent text-white px-10 py-5 rounded-xl text-xl font-semibold transition shadow-lg hover:shadow-[0_0_20px_#A78BFA]">
+          Descargar PDF
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="text-gray-500 text-sm text-center py-6">
+    <span>El programo un policía pixelado</span>
+  </footer>
+
+</body>
+</html>
